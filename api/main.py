@@ -1,9 +1,10 @@
-from fastapi import FastAPI, UploadFile, File
-import time
+from fastapi import FastAPI
+from routers import compress
 
 app = FastAPI()
 
-
 @app.get("/")
-def hello_world():
-    return {"message": "hello world!"}
+async def hello():
+    return {"message": "Hello world"}
+
+app.include_router(compress.router)
