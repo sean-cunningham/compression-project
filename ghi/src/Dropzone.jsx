@@ -29,6 +29,8 @@ const rejectStyle = {
   borderColor: '#ff1744'
 };
 
+const url = 'http://localhost:8000/compress/';
+
 export default function Dropzone() {
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.forEach((file) => {
@@ -39,6 +41,20 @@ export default function Dropzone() {
       reader.onload = () => {
         const binaryStr = reader.result;
         console.log(binaryStr);
+        const formData = new FormData();
+        formData.append('file', file)
+        fetch(url, {
+          method: 'POST',
+          body: formData,
+        })
+        .then(response=>response.json())
+        .then(data=>{
+          console.log('success: ', data);
+        })
+        .catch(error=>{
+          console.error('Error:', error);
+        })
+
       };
       reader.readAsArrayBuffer(file);
     });
