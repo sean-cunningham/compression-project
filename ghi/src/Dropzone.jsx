@@ -31,7 +31,7 @@ const rejectStyle = {
 
 const url = 'http://localhost:8000/compress/';
 
-export default function Dropzone() {
+export default function Dropzone({handleResults}) {
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.forEach((file) => {
       const reader = new FileReader();
@@ -49,6 +49,7 @@ export default function Dropzone() {
         .then(response=>response.json())
         .then(data=>{
           console.log('success: ', data);
+          handleResults(data);
         })
         .catch(error=>{
           console.error('Error:', error);
