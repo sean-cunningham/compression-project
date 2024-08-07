@@ -14,7 +14,6 @@ def lzw_compress(data):
         if b_string_plus in lookup:
             b_string = b_string_plus
         else:
-            print(lookup[b_string])
             result.append(lookup[b_string])
             lookup[b_string_plus] = lookup_size
             lookup_size += 1
