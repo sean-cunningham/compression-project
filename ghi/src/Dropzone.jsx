@@ -1,4 +1,3 @@
-import { MenuList } from '@mui/material';
 import React, { useCallback, useMemo } from 'react';
 import { useDropzone } from 'react-dropzone';
 
@@ -8,10 +7,6 @@ const baseStyle = {
   flexDirection: 'column',
   alignItems: 'center',
   padding: '20px',
-  width: '80vw',
-  marginLeft: '10%',
-  marginRight: '10%',
-  height: '60%',
   borderWidth: 2,
   borderRadius: 2,
   borderColor: '#eeeeee',
@@ -36,7 +31,7 @@ const rejectStyle = {
 
 const url = 'http://localhost:8000/compress/';
 
-export default function Dropzone({handleResults}) {
+export default function Dropzone() {
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.forEach((file) => {
       const reader = new FileReader();
@@ -54,7 +49,6 @@ export default function Dropzone({handleResults}) {
         .then(response=>response.json())
         .then(data=>{
           console.log('success: ', data);
-          handleResults(data);
         })
         .catch(error=>{
           console.error('Error:', error);
