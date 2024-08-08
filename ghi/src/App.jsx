@@ -3,6 +3,7 @@ import Dropzone from './Dropzone';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Result_Card from './Card';
+import './App.css'
 
 
 function App() {
@@ -15,23 +16,25 @@ function App() {
 
   return (
 
-      <Box sx={{
-        width: '100%',
-        maxWidth: 500,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center"
-        }}>
-        <Typography variant="h3" gutterBottom>
-          Drop Files here to compress
-        </Typography>
-        <Dropzone handleResults={handleResults}/>
-        {Object.entries(results).map(([name, result])=>{
-            return <Result_Card key={name} name={name} result={result}/>
-        })}
+      <Box className="container">
+        <Box className="top">
+          <Typography variant="h3" component="div" gutterBottom>
+            Drop Files here to Compress
+          </Typography>
+        </Box>
+        <Box className="middle">
+          <Dropzone handleResults={handleResults}/>
+        </Box>
+        <Box className="bottom">
+          {Object.entries(results).map(([name, result])=>{
+              return <Result_Card key={name} name={name} result={result}/>
+          })}
+        </Box>
       </Box>
+
+
+
+
 
   )
 }

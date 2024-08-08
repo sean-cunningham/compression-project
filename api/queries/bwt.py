@@ -33,7 +33,8 @@ def bw_rebuild(word, idx, mark):
         arr = sorted([word[i:i+1] + arr[i] for i in range(len(word))])
 
     result = arr[idx]
-    return result.rstrip(mark)
+
+    return result[:-1]
 
 
 def compress_bw_rle(data):

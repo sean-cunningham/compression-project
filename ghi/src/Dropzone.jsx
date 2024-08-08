@@ -1,3 +1,4 @@
+import { MenuList } from '@mui/material';
 import React, { useCallback, useMemo } from 'react';
 import { useDropzone } from 'react-dropzone';
 
@@ -7,6 +8,10 @@ const baseStyle = {
   flexDirection: 'column',
   alignItems: 'center',
   padding: '20px',
+  width: '80vw',
+  marginLeft: '10%',
+  marginRight: '10%',
+  height: '60%',
   borderWidth: 2,
   borderRadius: 2,
   borderColor: '#eeeeee',
