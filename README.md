@@ -4,11 +4,11 @@
 
 I found the topic of compression very interesting during this course and wanted to dig deeper than we could cover in the section on Huffman encoding. For this reason, I decided to research different compression algorithms, select a few, and build the algorithms into an application that allows users to upload a file and see an output comparing the compression data of the different algorithms.
 
-The application can be accessed at:
+The application can be accessed at: http://compress-frontend.eba-x3xxyuke.us-west-2.elasticbeanstalk.com/
 
 ## How to Use
 
-This application is pretty bare-bones and straightforward. Drag any file into the drop one (or click on the drop zone to navigate toa file). Once the file is chosen, it will compress it using multiple algorithms and show the compression results in cards below the drop zone.
+This application is pretty bare-bones and straightforward. Drag any file into the drop one (or click on the drop zone to navigate to a file). Once the file is chosen, it will compress it using multiple algorithms and show the compression results in cards below the drop zone.
 
 Notes on use:
 
