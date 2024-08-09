@@ -15,6 +15,7 @@ Notes on use:
 - **Use small files.** These are not great algorithms and large files will take some time to compress. There are two test files in the code base in the api test directory that can be used. The first is test_file.txt which is a few chapters of Moby dick. The second (rle_test) is in the same directory and is just a txt file with the letter r repeated multiple times. There is solid reasoning for this which will be explained below.
 - If you are not able to access the live application you can do the following:
     - clone the repo
+    - in ghi>src>Dropzone.jsx change the url to "http://localhost:8000"
     - download and install docker desktop (https://www.docker.com/products/docker-desktop/)
     - cd into the main directory
     - In the terminal use `docker-compose build && docker-compose up` (this may take a moment)
