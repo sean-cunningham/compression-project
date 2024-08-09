@@ -29,7 +29,7 @@ const rejectStyle = {
   borderColor: '#ff1744'
 };
 
-const url = 'http://localhost:8000/compress/';
+const url = 'http://compress-backend.eba-thpp9wjx.us-west-2.elasticbeanstalk.com';
 
 export default function Dropzone() {
   const onDrop = useCallback((acceptedFiles) => {

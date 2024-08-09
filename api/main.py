@@ -7,11 +7,12 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Adjust according to your frontend URL
+    allow_origins=["http://localhost:5173", "http://compress-frontend.eba-x3xxyuke.us-west-2.elasticbeanstalk.com"],  # Adjust according to your frontend URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.get("/")
 async def hello():

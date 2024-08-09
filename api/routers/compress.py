@@ -5,7 +5,7 @@ from queries.compress_file import compress
 router = APIRouter()
 
 
-@router.post("/compress/")
+@router.post("/")
 async def compress_file(file: UploadFile = File(...)):
     content = await file.read()
     results = compress(content)
