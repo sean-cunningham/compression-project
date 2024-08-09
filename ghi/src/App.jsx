@@ -11,7 +11,10 @@ function App() {
   const [results, setResults] = useState({});
 
 
-  const handleResults = (results) => { setResults(results)};
+  const handleResults = (results) => {
+    console.log("handleing results: ", results)
+    setResults(results)
+  };
 
   console.log("results: ", results)
 
@@ -28,6 +31,8 @@ function App() {
         </Box>
         <Box className="bottom">
           {Object.entries(results).map(([name, result])=>{
+              console.log("name: ", name)
+              console.log("result: ", result)
               return <Result_Card key={name} name={name} result={result}/>
           })}
         </Box>

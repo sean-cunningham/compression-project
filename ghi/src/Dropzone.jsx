@@ -53,7 +53,7 @@ export default function Dropzone() {
         .then(response=>response.json())
         .then(data=>{
           console.log('success: ', data);
-          // handleResults(data)
+          handleResults(data);
         })
         .catch(error=>{
           console.error('Error:', error);

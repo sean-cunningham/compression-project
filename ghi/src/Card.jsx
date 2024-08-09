@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 
 const Result_Card = ({ name, result }) => {
 
+    console.log("card: ", name, result)
+
     let size = result.original_size;
     let compressed_size = result.compressed_size
     let compression = Math.round((result.compression)*100)
