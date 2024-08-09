@@ -12,7 +12,7 @@ This application is pretty bare-bones and straightforward. Drag any file into th
 
 Notes on use:
 
-- **Use small files.** These are not great algorithms and large files will take some time to compress. there are to test files in the code base in the api test direectory that can be used. The first is test_file.txt which is a few chapters of Moby dick. The second (rle_test) is in the same directory and is just a txt file with the letter r repeated multiple times. There is solid reasoning for this which will be explained below.
+- **Use small files.** These are not great algorithms and large files will take some time to compress. There are two test files in the code base in the api test directory that can be used. The first is test_file.txt which is a few chapters of Moby dick. The second (rle_test) is in the same directory and is just a txt file with the letter r repeated multiple times. There is solid reasoning for this which will be explained below.
 - If you are not able to access the live application you can do the following:
     - clone the repo
     - download and install docker desktop (https://www.docker.com/products/docker-desktop/)
@@ -28,11 +28,11 @@ I ended up selecting Run Length Encoding and Lempel Ziv Welch as my compression 
 
 ### Run Length Encoding
 
-This algorithm is probably he most basic algorithm for ending. All it does is scan a file for recurring adjacent bytes and group them by appending the number of recurring instances to a single instance of that byte.
+This algorithm is probably the most basic algorithm for ending. All it does is scan a file for recurring adjacent bytes and group them by appending the number of recurring instances to a single instance of that byte.
 
 For example, aaaaaabbbbbbaaabbb would compress to 6a6b3a3b. As you can see this results in a smaller file than the original.
 
-The key weak point of this algorithm is that it depends on large groups of recurring bytes to be efficient. As you can see with the first test file it actually makes the file larger than the original. Hence the reason for the other test file to show that it actually works for the right kind of data.
+The key weak point of this algorithm is that it depends on large groups of recurring bytes to be efficient. As you can see with the first test file it actually makes the file larger than the original. Hence the reason for the other test file is to show that it actually works for the right kind of data.
 
 ### Lemper Ziv Welch
 
