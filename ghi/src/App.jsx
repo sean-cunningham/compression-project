@@ -13,6 +13,7 @@ function App() {
 
   const handleResults = (results) => { setResults(results)};
 
+  console.log("results: ", results)
 
   return (
 

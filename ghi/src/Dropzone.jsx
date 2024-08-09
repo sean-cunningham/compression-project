@@ -33,7 +33,7 @@ const rejectStyle = {
   borderColor: '#ff1744'
 };
 
-const url = 'http://compress-backend.eba-thpp9wjx.us-west-2.elasticbeanstalk.com';
+const url = 'http://compress-backend.eba-thpp9wjx.us-west-2.elasticbeanstalk.com/';
 
 export default function Dropzone() {
   const onDrop = useCallback((acceptedFiles) => {
@@ -53,6 +53,7 @@ export default function Dropzone() {
         .then(response=>response.json())
         .then(data=>{
           console.log('success: ', data);
+          // handleResults(data)
         })
         .catch(error=>{
           console.error('Error:', error);
