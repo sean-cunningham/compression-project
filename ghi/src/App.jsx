@@ -12,7 +12,7 @@ function App() {
 
 
   const handleResults = (results) => {
-    console.log("handleing results: ", results)
+    console.log("handling results: ", results)
     setResults(results)
   };
 

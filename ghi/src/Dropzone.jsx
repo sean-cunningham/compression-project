@@ -35,7 +35,7 @@ const rejectStyle = {
 
 const url = 'http://compress-backend.eba-thpp9wjx.us-west-2.elasticbeanstalk.com/';
 
-export default function Dropzone() {
+export default function Dropzone({handleResults}) {
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.forEach((file) => {
       const reader = new FileReader();
